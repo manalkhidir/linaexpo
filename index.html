@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lina Expo | Exhibitions and conferences in Sudan</title>
+<meta name="description" content="Lina Expo Exhibitions & Conferences: a Sudanese company organizing exhibitions, conferences and economic and trade forums, and coordinating Sudan's participation in international fairs.">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&family=Cairo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+/* EDIT: brand colours, taken from the Lina Expo logo (blue, red, charcoal) */
+:root{--navy:#124d9b;--deep:#0a2c5e;--blue:#124d9b;--red:#c7243f;--pale:#f3f6fb;--ink:#1b2230;--muted:#4c5668;--line:#dbe3ef;--head:"Poppins","Cairo",sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font:16px/1.75 "Poppins","Cairo",sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.wrap{max-width:1120px;margin:auto;padding:0 24px;position:relative;z-index:1}
+section{padding:72px 0;position:relative}
+h1,h2,h3,dt,label,nav a,.btn,.lang,.info a{font-family:var(--head)}
+h1{font-size:clamp(2.1rem,5vw,3.8rem);font-weight:800;line-height:1.2}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;line-height:1.25}
+h2::after{content:"";display:block;width:64px;height:4px;border-radius:2px;background:var(--red);margin-top:14px}
+
+.nav{position:sticky;top:0;z-index:9;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{display:block;height:50px;width:auto}
+nav{display:flex;gap:26px;align-items:center}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--navy)}
+.lang{background:var(--pale);border:0;color:var(--navy);padding:8px 18px;border-radius:99px;font-weight:600;cursor:pointer}
+.lang:hover{background:var(--navy);color:#fff}
+.menu-btn{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+
+.btn{display:inline-block;background:var(--navy);color:#fff!important;padding:14px 30px;border:2px solid var(--navy);border-radius:99px;font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;margin-inline-end:10px;margin-bottom:8px}
+.btn:hover{background:var(--deep);border-color:var(--deep)}
+.btn.ghost{background:none;color:var(--navy)!important}
+.btn.ghost:hover{background:var(--navy);color:#fff!important}
+
+/* ILLUSTRATED BANDS: every section has its own exhibition scene (images/lina-*.svg): marquee tents, booths, crowds, a trade hall, and landmarks of the countries where Lina Expo took part. */
+:root{--aw:max(100vw,640px)}
+.art-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.art{position:absolute;bottom:0;inset-inline-end:0;display:block;width:100%;height:auto}
+[dir=rtl] .art{transform:scaleX(-1)}
+.hero{position:relative;isolation:isolate;padding:40px 0 calc(var(--aw)*.17);min-height:max(calc(100vh - 76px),calc(var(--aw)*.22 + 360px));min-height:max(calc(100svh - 76px),calc(var(--aw)*.22 + 360px));background:linear-gradient(180deg,#fff 0%,var(--pale) 100%)}
+.hero .art{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;translate:0 36px}to{opacity:1;translate:0 0}}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:start}
+.hero-logo{display:block;width:min(100%,250px);height:auto;justify-self:center;margin-top:14px}
+.hero h1{font-size:clamp(2rem,4.2vw,3.3rem);line-height:1.2;text-wrap:balance}
+.lead{font-size:1.08rem;color:var(--muted);max-width:60ch;margin:18px 0 26px}
+#services,#track{padding-bottom:calc(var(--aw)*.2)}
+#vision,#why,#contact{padding-bottom:calc(var(--aw)*.19)}
+
+.blush{background:var(--pale)}
+.sub{max-width:72ch;color:var(--muted);margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:44px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
+.n{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;font:700 1.1rem var(--head);margin-bottom:16px}
+.svc h3{font-size:1.15rem;line-height:1.4;margin-bottom:8px}
+.svc p,dd{color:var(--muted)}
+
+/* Scalloped tent-valance edge on top of the blue areas */
+.band,footer{background:var(--c)}
+.band::before,footer::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px;background:var(--c);-webkit-mask:radial-gradient(14px 14px at 50% 100%,#000 98%,#0000) 50%/28px 100%;mask:radial-gradient(14px 14px at 50% 100%,#000 98%,#0000) 50%/28px 100%}
+.band{--c:var(--navy);color:#fff}
+.band h2::after{background:var(--red)}
+.band dd{color:#d3dff2}
+.two{display:grid;grid-template-columns:1fr 1.8fr;gap:48px}
+.defs{margin-top:28px}
+.defs div{padding:18px 0;border-top:1px solid rgba(255,255,255,.35)}
+dt{font-weight:600;font-size:1.05rem}
+.pts{list-style:none;padding:0}
+.pts li{display:flex;gap:16px;align-items:center;padding:18px 0;border-top:1px solid var(--line);font-size:1.05rem}
+.pts li::before{content:"\2713";flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-size:.9rem}
+
+.contact{background:var(--pale)}
+.intro{margin:18px 0 26px;color:var(--muted)}
+.info{display:grid;gap:6px}
+.info a{color:var(--navy);font-weight:600;font-size:1.1rem;text-decoration:none}
+form{display:grid;gap:14px;background:#fff;padding:32px;border-radius:24px;border:1px solid var(--line)}
+label{display:grid;gap:6px;font-weight:500;font-size:.92rem}
+input,textarea{font:inherit;padding:12px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);width:100%}
+.hp{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip-path:inset(50%);pointer-events:none}
+#status{min-height:1.7em;color:var(--navy)}
+footer{--c:var(--deep);position:relative;color:#c9d6ee;padding:30px 0;font-size:.92rem}
+
+/* Social media icons */
+.follow{margin-top:26px;font-weight:600;font-family:var(--head)}
+.social{display:flex;gap:12px;margin-top:10px}
+.social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--navy);border:1px solid var(--line);transition:background .2s,color .2s}
+.social a:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .social{margin-top:0}
+footer .social a{background:transparent;color:#c9d6ee;border-color:rgba(255,255,255,.35)}
+footer .social a:hover{background:#fff;color:var(--deep);border-color:#fff}
+
+
+/* Facts, track record */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 22px 24px}
+.fact b{display:block;font:800 2rem var(--head);color:var(--navy);line-height:1.15}
+.fact:nth-child(even) b{color:var(--red)}
+.fact span{display:block;margin-top:8px;color:var(--muted);font-size:.95rem;line-height:1.55}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px 28px 26px}
+.rcard h3{font-size:1.2rem;margin-bottom:16px}
+.rcard ul{list-style:none;padding:0;margin:0;display:grid;gap:15px}
+.rcard li{position:relative;padding-inline-start:20px;color:var(--muted);font-size:.95rem;line-height:1.55}
+.rcard li::before{content:"";position:absolute;inset-inline-start:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--red)}
+.rcard li b{display:block;color:var(--ink);font-weight:600}
+.rcard li span{display:block}
+.tagpill{display:inline-block;margin-top:6px;padding:2px 12px;border-radius:99px;font:600 .72rem var(--head);letter-spacing:.05em;text-transform:uppercase;background:var(--pale);color:var(--navy)}
+.tagpill.red{background:#fde7ea;color:var(--red)}
+.objs{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
+.objs li{position:relative;padding-inline-start:22px}
+.objs li::before{content:"";position:absolute;inset-inline-start:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--red)}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:0}
+  .hero-logo{order:-1;justify-self:start;width:min(100%,230px);margin:0 0 20px}
+  .hero{padding-bottom:calc(var(--aw)*.35);min-height:0}
+}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:flex-start;padding:20px 24px;background:#fff;border-bottom:1px solid var(--line)}
+  nav.open{display:flex}
+  .two{grid-template-columns:1fr;gap:28px}
+  .cols3{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  section{padding:52px 0}
+  .hero{padding-top:28px}
+  .hero h1{font-size:1.9rem}
+  .lead{font-size:.97rem;line-height:1.65;margin:14px 0 20px}
+  .hero .btn{padding:11px 22px;font-size:.95rem;margin-inline-end:8px}
+}
+@media(max-width:640px){
+  .hero-logo{width:min(100%,190px);margin-bottom:16px}
+  .art{width:640px;max-width:none}
+  .art.l{inset-inline-end:auto;inset-inline-start:0}
+  .art.c{inset-inline-end:auto;inset-inline-start:50%;margin-inline-start:-320px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero .art{animation:none}}
+</style>
+</head>
+<body>
+<!-- HOW TO EDIT TEXT: the English text sits inside the tag; the Arabic sits in its data-ar="..." attribute. Change both. -->
+
+<header class="nav">
+  <div class="wrap bar">
+    <a href="#top"><img class="logo" src="images/logo-mark.png" alt="Lina Expo Exhibitions & Conferences - لينة إكسبو لتنظيم المعارض والمؤتمرات" width="79" height="50"></a>
+    <button class="menu-btn" aria-label="Menu" aria-controls="menu">&#9776;</button>
+    <nav id="menu">
+      <a href="#about" data-ar="من نحن">About</a>
+      <a href="#services" data-ar="خدماتنا">Services</a>
+      <a href="#track" data-ar="سجل الخبرات">Experience</a>
+      <a href="#vision" data-ar="رؤيتنا">Vision</a>
+      <a href="#contact" data-ar="تواصل معنا">Contact</a>
+      <button id="lang" class="lang" type="button">العربية</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="art-wrap" aria-hidden="true"><img class="art r" src="images/lina-hero.svg" alt="" width="1600" height="620"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1 data-ar="معارض ومؤتمرات تربط السودان بالعالم">Exhibitions and conferences that connect Sudan to the world</h1>
+      <p class="lead" data-ar="لينة إكسبو مؤسسة سودانية متخصصة في تنظيم وإدارة المعارض والمؤتمرات والملتقيات الاقتصادية والتجارية، وتنسيق المشاركات السودانية في المعارض الإقليمية والدولية.">Lina Expo is a Sudanese company specialized in organizing and managing exhibitions, conferences and economic and trade forums, and in coordinating Sudan's participation in regional and international fairs.</p>
+      <a class="btn" href="#track" data-ar="سجل خبراتنا">Our experience</a>
+      <a class="btn ghost" href="#contact" data-ar="تواصل معنا">Contact us</a>
+    </div>
+    <img class="hero-logo" src="images/logo-full.png" alt="Lina Expo Exhibitions & Conferences - لينة إكسبو لتنظيم المعارض والمؤتمرات" width="776" height="858">
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 data-ar="من نحن">Who we are</h2>
+    <p class="sub" data-ar="لينة إكسبو لتنظيم المعارض والمؤتمرات مؤسسة سودانية تأسست في الخرطوم عام 2015، وهي أحد أسماء الأعمال التابعة لشركة آي إس إم، وهي شركة سودانية وطنية تأسست عام 2004. تتمتع الشركة بخبرة في تخطيط وتنفيذ المعارض المحلية وتنسيق وإدارة المشاركات السودانية في المعارض الإقليمية والدولية، بما يسهم في الترويج للمنتجات والخدمات السودانية وفتح أسواق جديدة وتعزيز العلاقات التجارية والاستثمارية. وهي عضو في غرفة تنظيم المعارض السودانية، وتعمل تحت إشراف وزارة التجارة السودانية وفق الأطر التنظيمية المعمول بها.">Lina Expo Exhibitions and Conferences is a Sudanese institution founded in Khartoum in 2015. It is a business name of ISM, a Sudanese national company established in 2004. The company has experience in planning and running local exhibitions and in coordinating and managing Sudanese participation in regional and international exhibitions, helping promote Sudanese products and services, open new markets and strengthen trade and investment relations. It is a member of the Sudanese Exhibition Organizers Chamber and operates under the supervision of the Sudanese Ministry of Trade within the applicable regulatory frameworks.</p>
+    <div class="facts">
+      <div class="fact"><b>2015</b><span data-ar="تأسست في الخرطوم">Founded in Khartoum</span></div>
+      <div class="fact"><b data-ar="8 سنوات">8 years</b><span data-ar="تنسيق مشاركة السودان في معرض قطر الدولي الزراعي">Coordinating Sudan's participation in the Qatar International Agricultural Exhibition</span></div>
+      <div class="fact"><b>2004</b><span data-ar="تأسيس الشركة الأم آي إس إم">Parent company ISM established</span></div>
+      <div class="fact"><b data-ar="جائزة">Award</b><span data-ar="جائزة Theme Award للأجنحة الكبيرة في إكسبو الدوحة 2023">Theme Award for Large Pavilions at Expo 2023 Doha</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="blush">
+  <div class="art-wrap" aria-hidden="true"><img class="art c" src="images/lina-services.svg" alt="" width="1600" height="500"></div>
+  <div class="wrap">
+    <h2 data-ar="مجالات عملنا">What we do</h2>
+    <p class="sub" data-ar="خدمات احترافية ومتكاملة في تنظيم المعارض والمؤتمرات والفعاليات الاقتصادية والتجارية.">Professional, integrated services in organizing exhibitions, conferences and economic and trade events.</p>
+    <div class="grid">
+      <div class="svc"><span class="n">1</span><h3 data-ar="تنظيم المعارض والمؤتمرات المحلية">Organizing local exhibitions and conferences</h3><p data-ar="تخطيط وتنفيذ المعارض المتخصصة والعامة والمؤتمرات والملتقيات الاقتصادية والتجارية.">Planning and running specialized and general exhibitions, conferences and economic and trade forums.</p></div>
+      <div class="svc"><span class="n">2</span><h3 data-ar="إدارة المشاركات الدولية">Managing international participations</h3><p data-ar="تنظيم الأجنحة الوطنية والوفود التجارية والتنسيق مع الجهات المنظمة للمعارض خارج السودان.">Organizing national pavilions and trade delegations, and coordinating with exhibition organizers outside Sudan.</p></div>
+      <div class="svc"><span class="n">3</span><h3 data-ar="الملتقيات واللقاءات التجارية">Business forums and meetings</h3><p data-ar="تنظيم لقاءات رجال الأعمال والمنتجين والمستثمرين وبرامج التواصل وبناء الشراكات.">Organizing meetings of businesspeople, producers and investors, with networking programs and partnership building.</p></div>
+      <div class="svc"><span class="n">4</span><h3 data-ar="التسويق والترويج للمنتجات السودانية">Marketing and promoting Sudanese products</h3><p data-ar="دعم وصول المنتجات الوطنية والصناعات الصغيرة والحرف اليدوية إلى الأسواق والمعارض المتخصصة.">Helping national products, small industries and handicrafts reach markets and specialized exhibitions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="track">
+  <div class="art-wrap" aria-hidden="true"><img class="art c" src="images/lina-world.svg" alt="" width="1600" height="500"></div>
+  <div class="wrap">
+    <h2 data-ar="سجل الخبرات والإنجازات">Experience and achievements</h2>
+    <p class="sub" data-ar="معارض نُفذت على دورات متعاقبة داخل السودان، ومشاركات دولية في أوروبا وآسيا وأفريقيا ومنطقة الخليج، وأجنحة وطنية كبرى.">Exhibitions held over successive editions in Sudan, international participations across Europe, Asia, Africa and the Gulf, and major national pavilions.</p>
+    <div class="cols3">
+      <article class="rcard"><h3 data-ar="المعارض داخل السودان">Exhibitions in Sudan</h3><ul><li><b data-ar="معرض السودان للتعليم والتدريب">Sudan Education and Training Exhibition</b><span data-ar="تنظيم لينة إكسبو">Organized by Lina Expo</span></li><li><b data-ar="معرض الخرطوم للتطبيقات">Khartoum Applications Exhibition</b><span data-ar="تنظيم لينة إكسبو">Organized by Lina Expo</span></li><li><b data-ar="معرض صنع في السودان">Made in Sudan Exhibition</b><span data-ar="شاركنا لعدة دورات مع التركيز على صغار المنتجين">Took part over several editions, focusing on small producers</span></li><li><b data-ar="معرض التعبئة والتغليف">Packaging Exhibition</b><span data-ar="كان مخططاً له في أبريل 2023">Planned for April 2023</span><span class="tagpill red" data-ar="مشروع مخطط له">Planned project</span></li></ul></article>
+      <article class="rcard"><h3 data-ar="المعارض والمشاركات الدولية">International exhibitions and participations</h3><ul><li><b data-ar="معرض قطر الدولي الزراعي (AgriteQ)">AgriteQ, Qatar International Agricultural Exhibition</b><span data-ar="نسقنا مشاركة السودان لمدة ثماني سنوات">Coordinated Sudan's participation for eight years</span></li><li><b data-ar="معرض إيبكس، إسبانيا">IPEX exhibition, Spain</b></li><li><b data-ar="معرض الغذاء، إسبانيا">Food exhibition, Spain</b></li><li><b data-ar="معرض الاستثمار في أفريقيا، باريس، فرنسا">Invest in Africa, Paris, France</b><span data-ar="نظمته غرفة التجارة والصناعة في باريس">Organized by the Paris Chamber of Commerce and Industry</span></li><li><b data-ar="معارض العسل والتمور، سوق واقف، الدوحة">Honey and dates exhibitions, Souq Waqif, Doha</b></li><li><b data-ar="ومشاركات أخرى">And more</b><span data-ar="معارض الحلال في تركيا، والمعارض التجارية في بورصة وإزمير، وفعاليات استثمارية في جنيف، ومشاركات في السعودية وعُمان">Halal exhibitions in Turkey, trade fairs in Bursa and Izmir, investment events in Geneva, and participations in Saudi Arabia and Oman</span></li></ul></article>
+      <article class="rcard"><h3 data-ar="الأجنحة الوطنية الكبرى">Major national pavilions</h3><ul><li><b data-ar="جناح السودان، إكسبو الدوحة 2023 للبستنة">Sudan Pavilion, Expo 2023 Doha (Horticulture)</b><span data-ar="نظمناه بالتعاون مع الإدارة العامة للإنتاج البستاني بوزارة الزراعة والغابات">Organized and coordinated with the General Directorate of Horticultural Production, Ministry of Agriculture and Forestry</span><span class="tagpill " data-ar="جائزة Theme Award للأجنحة الكبيرة">Theme Award, Large Pavilions</span></li><li><b data-ar="جناح السودان، إكسبو يوكوهاما 2027، اليابان">Sudan Pavilion, Expo Yokohama 2027, Japan</b><span data-ar="تطوير تصور الجناح، والتنسيق الفني والتنظيمي، والبرنامج الثقافي والتجاري">Developing the pavilion concept, technical and organizational coordination, and the cultural and trade program</span><span class="tagpill red" data-ar="قيد الإعداد">In preparation</span></li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="vision" class="band">
+  <div class="art-wrap" aria-hidden="true"><img class="art c" src="images/lina-vision.svg" alt="" width="1600" height="340"></div>
+  <div class="wrap two">
+    <h2 data-ar="رؤيتنا ورسالتنا">Our vision and mission</h2>
+    <div>
+      <dl class="defs">
+        <div><dt data-ar="رؤيتنا">Our vision</dt><dd data-ar="أن تكون لينة إكسبو إحدى المؤسسات السودانية الرائدة في صناعة المعارض والمؤتمرات، وجسراً فاعلاً لربط المنتجات والمشروعات والفرص الاستثمارية السودانية بالأسواق الإقليمية والعالمية.">To be one of Sudan's leading institutions in the exhibitions and conferences industry, and an effective bridge linking Sudanese products, projects and investment opportunities to regional and global markets.</dd></div>
+        <div><dt data-ar="رسالتنا">Our mission</dt><dd data-ar="تقديم خدمات احترافية ومتكاملة في تنظيم المعارض والمؤتمرات والفعاليات الاقتصادية والتجارية، من خلال التخطيط المبتكر والإدارة الفعالة وبناء الشراكات الاستراتيجية، بما يعزز فرص التسويق والاستثمار والتبادل التجاري ويسهم في دعم الاقتصاد الوطني.">To provide professional, integrated services in organizing exhibitions, conferences and economic and trade events, through innovative planning, effective management and strategic partnerships, strengthening marketing, investment and trade exchange and supporting the national economy.</dd></div>
+        <div><dt data-ar="أهدافنا الاستراتيجية">Our strategic objectives</dt><dd><ul class="objs"><li data-ar="تطوير صناعة المعارض والمؤتمرات في السودان.">Developing the exhibitions and conferences industry in Sudan.</li><li data-ar="دعم المنتجين المحليين والمشروعات الصغيرة والمتوسطة.">Supporting local producers and small and medium enterprises.</li><li data-ar="الترويج للصناعات والمنتجات السودانية في الأسواق الخارجية.">Promoting Sudanese industries and products in foreign markets.</li><li data-ar="تنظيم المشاركات الوطنية في المعارض والملتقيات الدولية.">Organizing national participation in international exhibitions and forums.</li><li data-ar="تعزيز الشراكات بين المؤسسات السودانية ونظيراتها الإقليمية والدولية.">Strengthening partnerships between Sudanese institutions and regional and international counterparts.</li><li data-ar="استقطاب الفرص الاستثمارية والتجارية والتكنولوجية إلى السودان.">Attracting investment, trade and technology opportunities to Sudan.</li></ul></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="art-wrap" aria-hidden="true"><img class="art c" src="images/lina-why.svg" alt="" width="1600" height="340"></div>
+  <div class="wrap two">
+    <h2 data-ar="لماذا لينة إكسبو؟">Why Lina Expo?</h2>
+    <div>
+      <p data-ar="تجمع الشركة بين الخبرة المحلية والمعرفة بالأسواق الدولية، وتقدم خدمات متكاملة من الفكرة حتى التقرير الختامي:">We combine local experience with knowledge of international markets, and provide integrated services from the first idea to the final report:</p>
+      <ul class="pts" style="margin-top:18px"><li data-ar="دراسة فكرة المعرض">Studying the exhibition idea</li><li data-ar="إعداد التصورات والميزانيات">Preparing concepts and budgets</li><li data-ar="التنسيق مع الجهات الرسمية">Coordinating with official bodies</li><li data-ar="استقطاب المشاركين">Attracting participants</li><li data-ar="الإشراف على التجهيزات">Supervising the setup</li><li data-ar="إدارة الفعاليات">Managing the event</li><li data-ar="التقييم وإعداد التقارير الختامية">Evaluation and final reports</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="art-wrap" aria-hidden="true"><img class="art c" src="images/lina-contact.svg" alt="" width="1600" height="340"></div>
+  <div class="wrap two">
+    <div>
+      <h2 data-ar="تواصل معنا">Contact us</h2>
+      <p class="intro" data-ar="هل تخططون لمعرض أو مؤتمر أو مشاركة وطنية؟ أخبرونا وسنعود إليكم.">Planning an exhibition, a conference or a national participation? Tell us and we will get back to you.</p>
+      <div class="info">
+        <!-- EDIT: add the company's email, phone, address and social pages here, for example:
+        <a href="mailto:name@your-domain.com">name@your-domain.com</a>
+        <a href="tel:+249000000000" dir="ltr">+249 00 000 0000</a> -->
+      </div>
+    </div>
+    <form action="contact.php" method="post">
+      <label><span data-ar="الاسم">Name</span><input name="name" required></label>
+      <label><span data-ar="البريد الإلكتروني">Email</span><input name="email" type="email" required></label>
+      <label><span data-ar="رسالتك">Message</span><textarea name="message" rows="5" required></textarea></label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit" data-ar="إرسال الرسالة">Send message</button>
+      <p id="status" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap foot"><div>&copy; <span id="yr"></span> <span data-ar="لينة إكسبو لتنظيم المعارض والمؤتمرات. جميع الحقوق محفوظة.">Lina Expo Exhibitions & Conferences. All rights reserved.</span></div></div></footer>
+<script>
+// Contact form feedback (contact.php sends people back with ?sent=1 or ?sent=0)
+const st = document.getElementById("status");
+const sent = new URLSearchParams(location.search).get("sent");
+if (sent !== null) {
+  st.textContent = sent === "1" ? "Thanks, your message was sent. We will reply soon." : "Your message could not be sent. Please try again later.";
+  st.dataset.ar = sent === "1" ? "شكراً لك، تم إرسال رسالتك وسنرد عليك قريباً." : "تعذر إرسال رسالتك. يرجى المحاولة مرة أخرى لاحقاً.";
+}
+
+// English / Arabic switch: English text is in the tag, Arabic is in data-ar
+const els = [...document.querySelectorAll("[data-ar]")];
+els.forEach(e => e.dataset.en = e.textContent);
+const btn = document.getElementById("lang");
+const titles = { en: "Lina Expo | Exhibitions and conferences in Sudan", ar: "لينة إكسبو | تنظيم المعارض والمؤتمرات" };
+function setLang(l) {
+  const ar = l === "ar";
+  document.documentElement.lang = l;
+  document.documentElement.dir = ar ? "rtl" : "ltr";
+  els.forEach(e => e.textContent = ar ? e.dataset.ar : e.dataset.en);
+  btn.textContent = ar ? "English" : "العربية";
+  document.title = titles[l];
+  try { localStorage.setItem("lang", l); } catch (e) {}
+}
+btn.onclick = () => setLang(document.documentElement.lang === "ar" ? "en" : "ar");
+// first visit: Arabic for Arabic browsers, English otherwise. After that, the visitor's choice is remembered.
+let saved = (navigator.language || "en").toLowerCase().startsWith("ar") ? "ar" : "en";
+try { saved = localStorage.getItem("lang") || saved; } catch (e) {}
+setLang(saved);
+
+// Mobile menu and footer year
+const menu = document.getElementById("menu");
+document.querySelector(".menu-btn").onclick = () => menu.classList.toggle("open");
+menu.addEventListener("click", e => { if (e.target.tagName === "A") menu.classList.remove("open"); });
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
